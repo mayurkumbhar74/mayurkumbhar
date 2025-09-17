@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: transparent;
+            padding: 15px 50px;
+            transition: background-color 0.4s ease;
+            z-index: 1000;
+        }
+
+        .navbar-scrolled {
+            background-color: #333;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff9900;
+        }
+
+        .header {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1500x800.png?text=Landing+Page+Header');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+        }
+
+        .header-content p {
+            font-size: 1.5em;
+        }
+
+        .section {
+            padding: 100px 50px;
+            text-align: center;
+        }
+
+        .section-1 {
+            background-color: #f4f4f4;
+        }
+
+        .section-2 {
+            background-color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .nav-links {
+                margin-top: 10px;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .header-content h1 {
+                font-size: 2.5em;
+            }
+
+            .header-content p {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-logo">SkillCraft</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="header" id="home">
+        <div class="header-content">
+            <h1>Responsive Landing Page</h1>
+            <p>This is a demonstration of a responsive website with an interactive navbar.</p>
+        </div>
+    </header>
+
+    <section class="section section-1" id="about">
+        <h2>About Us</h2>
+        <p>This is the first section of our landing page. The content here will be replaced with your actual information.</p>
+    </section>
+
+    <section class="section section-2" id="services">
+        <h2>Our Services</h2>
+        <p>This section describes the services we offer. It is a key part of any landing page.</p>
+    </section>
+
+    <section class="section section-1" id="contact">
+        <h2>Contact Us</h2>
+        <p>You can add your contact form or details here.</p>
+    </section>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.onscroll = function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classLi
